@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "e6278b3f-653a-45c7-a5d6-a0900be22fc9",
+		"name": "DesafioNOESIS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "BuscaFilme",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.globals.clear();\r",
+							"pm.globals.set(\"API_KEY\", '52ec71bf');\r",
+							"pm.globals.set(\"ID_DO_FILME\", 'tt1285016');"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var parse = JSON.parse(responseBody);\r",
+							"tests[\"Validando Título do Filme\"]   = parse.Title === \"The Social Network\";\r",
+							"tests[\"Validando Ano de Lançamento\"]   = parse.Year === \"2010\";\r",
+							"tests[\"Validando Idioma Original\"]   = parse.Language ===\"English, French\";\r",
+							"\r",
+							"pm.test(\"Status de retorno\", function () {\r",
+							"    pm.response.to.be.success;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.omdbapi.com/?apikey={{API_KEY}}&i={{ID_DO_FILME}}",
+					"protocol": "http",
+					"host": [
+						"www",
+						"omdbapi",
+						"com"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{{API_KEY}}"
+						},
+						{
+							"key": "i",
+							"value": "{{ID_DO_FILME}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
