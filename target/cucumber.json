@@ -1,0 +1,204 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-31T19:55:32.061Z",
+        "line": 6,
+        "name": ": Realizar consulta de medicos apenas da UF: RJ",
+        "description": "",
+        "id": "validar-a-apresentação-dos-resultados-com-a-especialidade-e-cidade;:-realizar-consulta-de-medicos-apenas-da-uf:-rj",
+        "type": "scenario",
+        "keyword": "Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 5768640100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "que eu acesse a Pagina da Unimed",
+            "match": {
+              "location": "stepDefinition.ConsultaApenasRioDeJaneiro.AcessarSite()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 1929624300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "clique em Encontre um Medico",
+            "match": {
+              "location": "stepDefinition.ConsultaApenasRioDeJaneiro.ClicarEncontreUmMedico()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 792535600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "efetue uma consulta avançada por Médicos no Rio de Janeiro",
+            "match": {
+              "location": "stepDefinition.ConsultaApenasRioDeJaneiro.ConsultaAvancadaRJ()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 2526235000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "devo conseguir verificar a Especialidade e a Cidade do Médico localizado",
+            "match": {
+              "location": "stepDefinition.ConsultaApenasRioDeJaneiro.ValidaEspecialidadeEEstado()"
+            },
+            "keyword": "Então "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestesUnimed"
+          },
+          {
+            "name": "@Teste1"
+          }
+        ]
+      }
+    ],
+    "name": "Validar a apresentação dos resultados com a Especialidade e Cidade",
+    "description": "",
+    "id": "validar-a-apresentação-dos-resultados-com-a-especialidade-e-cidade",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/features/ConsultaApenasRioDeJaneiro.feature",
+    "tags": [
+      {
+        "name": "@TestesUnimed",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      },
+      {
+        "name": "@Teste1",
+        "type": "Tag",
+        "location": {
+          "line": 3,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-31T19:55:43.234Z",
+        "line": 6,
+        "name": ": Realizar consulta de medicos apenas da UF: RJ",
+        "description": "",
+        "id": "verificar-resultados-nas-paginas-1-2-3;:-realizar-consulta-de-medicos-apenas-da-uf:-rj",
+        "type": "scenario",
+        "keyword": "Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 5742641000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "que eu acesse a Pagina da Unimed",
+            "match": {
+              "location": "stepDefinition.ConsultaApenasRioDeJaneiro.AcessarSite()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 2362826300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "clique em Encontre um Medico",
+            "match": {
+              "location": "stepDefinition.ConsultaApenasRioDeJaneiro.ClicarEncontreUmMedico()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 861166900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "efetue uma consulta avançada por Médicos no Rio de Janeiro",
+            "match": {
+              "location": "stepDefinition.ConsultaApenasRioDeJaneiro.ConsultaAvancadaRJ()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 2726282600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "devo conseguir verificar a Especialidade e a Cidade do Médico localizado",
+            "match": {
+              "location": "stepDefinition.ConsultaApenasRioDeJaneiro.ValidaEspecialidadeEEstado()"
+            },
+            "keyword": "Então "
+          },
+          {
+            "result": {
+              "duration": 6764929200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "validar que nas paginas 1,2 e 3 nao exista retorno de São Paulo",
+            "match": {
+              "location": "stepDefinition.ConsultaApenasRioDeJaneiroValidacaoPag123.validaRetornoPesquisa()"
+            },
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestesUnimed"
+          },
+          {
+            "name": "@Teste2"
+          }
+        ]
+      }
+    ],
+    "name": "Verificar resultados nas paginas 1,2,3",
+    "description": "",
+    "id": "verificar-resultados-nas-paginas-1-2-3",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/features/ConsultaApenasRioDeJaneiroValidacaoPag123.feature",
+    "tags": [
+      {
+        "name": "@TestesUnimed",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      },
+      {
+        "name": "@Teste2",
+        "type": "Tag",
+        "location": {
+          "line": 3,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

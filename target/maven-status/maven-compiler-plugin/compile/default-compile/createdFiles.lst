@@ -1,0 +1,3 @@
+PageObjects\PO_GuiaMedico.class
+PageObjects\PO_HomePage.class
+Utils\Base.class
