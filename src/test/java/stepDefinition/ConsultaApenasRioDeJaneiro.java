@@ -22,7 +22,7 @@ public class ConsultaApenasRioDeJaneiro {
     public void Start() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
         driver.manage().window().maximize();
     }
 
@@ -31,7 +31,7 @@ public class ConsultaApenasRioDeJaneiro {
     Start();
     Home = new PO_HomePage(driver);
     driver.get(Base.SiteDesejado);
-        Base.takeSnapShot(driver, PastaEvidencia+"Step1.png");
+        Base.print(driver, PastaEvidencia+"Step1.png");
     }
 
     @E("clique em Encontre um Medico")
@@ -39,21 +39,21 @@ public class ConsultaApenasRioDeJaneiro {
                 Home.BuscaMedico();
         Guia= new PO_GuiaMedico(driver);
                 assertEquals(Guia.Titulo,driver.getTitle());
-        Base.takeSnapShot(driver, PastaEvidencia+"Step2.png");
+        Base.print(driver, PastaEvidencia+"Step2.png");
     }
     @E("efetue uma consulta avançada por Médicos no Rio de Janeiro")
     public void ConsultaAvancadaRJ() throws Exception {
           Guia.ClicaAbaAvancada();
-        Base.takeSnapShot(driver, PastaEvidencia+"Step3.png");
+        Base.print(driver, PastaEvidencia+"Step3.png");
 
     }
     @Então("devo conseguir verificar a Especialidade e a Cidade do Médico localizado")
     public void ValidaEspecialidadeEEstado() throws Exception {
        Guia.InformaEstado();
-        Base.takeSnapShot(driver, PastaEvidencia+"Step4.png");
+        Base.print(driver, PastaEvidencia+"Step4.png");
        Guia.ClicaPesquisa();
        Guia.aguardaCard();
-        Base.takeSnapShot(driver, PastaEvidencia+"Step5.png");
+        Base.print(driver, PastaEvidencia+"Step5.png");
 
            }
 }

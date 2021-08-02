@@ -8,6 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import static org.openqa.selenium.By.xpath;
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
+
 
 public class PO_GuiaMedico extends Base {
     WebDriver driver;
@@ -41,9 +44,13 @@ WebElement Card1;
 @FindBy(xpath = "//*[@id=\"gm-v3-root\"]/div/div[2]/div[2]/div[1]/div[3]/button")
 WebElement btnProximaPagina;
 
+@FindBy(xpath = "//*[contains(text(), '/SP')]")
+    WebElement SAMPA;
+
+
 //Metodos
 
-public void ClicaAbaAvancada() throws InterruptedException {
+public void ClicaAbaAvancada() {
     this.BuscaAvancada.click();
 }
 public void InformaEstado() {
@@ -74,9 +81,13 @@ String UFBusca=this.FieldEstadoBusca.getText();
     }
 
     public void avancaPagina(){
-
     btnProximaPagina.click();
         }
+
+        public boolean buscaSP(){
+            return SAMPA != null;
+        }
+
 
 }
 
